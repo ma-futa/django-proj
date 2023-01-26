@@ -24,4 +24,6 @@ jobs:
         python3 -m venv ./venv
         source venv/bin/activate
         pip3 install -r requirements.txt
+        cd /home/ubuntu/actions-runner/_work/django-proj/django-proj
+        gunicorn --bind 0.0.0.0:8000 django_proj.wsgi
 
