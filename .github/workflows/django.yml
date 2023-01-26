@@ -27,7 +27,7 @@ jobs:
     - name: Configure web app
       run: |
         cd /home/ubuntu/actions-runner/_work/django-proj/django-proj
-        echo "this is step 0"
+        which python3
         gunicorn --bind 0.0.0.0:8000 django_proj.wsgi
         echo "this is step 1"
 
