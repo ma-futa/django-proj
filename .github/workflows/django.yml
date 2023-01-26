@@ -30,6 +30,6 @@ jobs:
         source venv/bin/activate
         which python3
         echo "this is step 0"
-        gunicorn --bind 0.0.0.0:8000 django_proj.wsgi
+        gunicorn --bind 0.0.0.0:8000 django_proj.wsgi:application
         echo "this is step 1"
 
