@@ -17,9 +17,9 @@ from http.client import HTTPResponse
 from django.contrib import admin
 from django.urls import path
 
+from django_proj.view import welcome
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('welcome/'),
+    path('welcome/', welcome, name='welcome'),
 ]
-def welcome(request):
-    return HTTPResponse("Welcome!")
